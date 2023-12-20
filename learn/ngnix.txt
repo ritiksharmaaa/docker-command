@@ -1,0 +1,7 @@
+# in this file we learn how to expose port .
+
+simple copy code with repo and it expose d 
+
+
+docker exec -t -i comtaoner nawm /bin/bash
+

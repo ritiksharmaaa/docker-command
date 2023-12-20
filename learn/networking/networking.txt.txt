@@ -1,0 +1,95 @@
+What is docker networking 
+
+docker network is a funcdamental aspect of docker that enable communication between docker conatiner and external network , it allow you to connect container together as well as connect to the host machine and other external resource . 
+
+a container has no information about what kind of network it's attach to or wheather theire peers are also docker workloads or not . 
+
+a container only see a network interface with an ip address a gateway a routing table , DNS service and other network details . 
+
+
+by default when you create or run a container using docker create and docker run the container does't expose any of its port to the outside world .
+
+use the --publish or -p flag to make a port available to service outside of docker . this create a firewall rule in the host mapping a container port on the docker host to the outside world . 
+
+
+
+-----------Netowrk Drivers ------------
+
+bridge : - The default bridge network is good for running container that don't require special networking capabilities user define bridge network enable container on the same docker host to communicate with each other a user defined network typically defined and isolated network for multiple container belonging to a common project or component.
+
+host : - Host network share the host network with the container when you use the driver the container network is not isolated from the host.
+network
+
+
+overlay : - overlay  are best when you need container running on different docker hosts two communicate or one multiple application work together using swarm services.
+
+macvlan : - macbeth network are best when you are migrating from a virtual machine setup or need your container to look like a physical host on your network with unique mac address.
+
+
+ipvlan : - IPV Land is similar to Mac V Land but does not assign unique mac address to container considered using IBV Lane when they are restriction on the number of Mac addresses this can be assigned to a network interface or port.
+
+
+
+in terms of Dhakar Afrij Network uses a software bridge which allow container connected to the same bridge network to communicate while providing isolation from container which are not connected to the bridge network.
+
+
+The Docker Bridge driver automatically install rules in the host machine so that container or different bridge network cannot communicate directly with each other.
+
+
+When you start Docker a default bridge network also called Bridge is created automatically and newly started container connected it to it unless otherwise specific.
+
+
+
+ex: - 
+
+   host win machine - conatiner one is connected via default bridge .  also container two also connected woth this default bridge network 
+
+
+   thats a reason why we abe to use internet inside container . 
+   
+
+
+  container can only communicate by ip not by container name . 
+
+
+
+
+user define Bridge Network 
+
+two container connected woth defsult bridge  so they can communicate it but 3 container connected with userdefined bridge so 2 container can get access of 3 conatiner . or 3 can access to 2 container .
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

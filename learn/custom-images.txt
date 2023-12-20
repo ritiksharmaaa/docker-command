@@ -1,0 +1,72 @@
+we make Dodkerfile 
+
+inside file write 
+
+from base image -- whatever we see from pulll we can use as base image. 
+
+WORKDIR /app
+
+COPY script.sh 
+
+
+# make the script executable
+
+RUN chmod +x script.sh
+
+
+# run the scripts when yhe container starts 
+
+CMD["./scripts.sh"]
+
+
+in script.sh inside -- 
+
+  echo "message yu want to show after initialise ."
+
+
+command after do all things in terminal :docker build -t name . this . is show current directory .
+
+
+
+
+
+-------------------change in scripts file .
+
+when you cahnge it you need to agin build it than it run . 
+
+
+
+---------------------some extra buil refiement --------------------
+
+docker build --no-cache -t mydockerimage . 
+
+
+mean it not check layer with previous docker image is buil from scratch . 
+
+it is build litbit slow becuse in previous it just check what file is same take it from there . 
+
+
+-------------------putting tags in our images ----------------
+
+
+same code as we build images just we need to add : tag which we want 
+
+
+exmp : - 
+
+ docker build -t mydockerimage:v1.0  .    - it image show it tags is v1 
+
+
+
+--so we know each change we have to make a new build so we just placed tagged to furture feature inside it and put tsg on it so it easy to understande which we need according to requirement .
+
+
+
+-----------------------------ignorefile -------------------
+
+we dont want to .ev file when we build a immage containre so we use .dockerignore 
+
+suppose when you working in nodejs so there is node module echich we dont want to go to image 
+
+
+

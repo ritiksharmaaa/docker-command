@@ -1,0 +1,24 @@
+we have to read how to use sql it writen in repo desc : - 
+
+  when we run sql make sql conatiner it#  run but its not stop becaus eit procss continious . so no need to add --it 
+
+# ---------------------------acessing mysql ---------------- shell ------------------
+
+docker exec -it mysql-c1 mysql -u root -p
+
+it ask for password - whcih we have give at the time os container instance .
+
+container pass my-root 
+
+------ 
+
+exit to sql shell 
+
+force clso ctrl c or exit 
+
+------------------------------
+that's it 
+
+we just learn about 
+
+ 

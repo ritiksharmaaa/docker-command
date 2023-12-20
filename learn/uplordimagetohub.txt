@@ -1,0 +1,6 @@
+docker tag id username/reponame you want 
+docker login
+username
+password
+docker push username/repo name 
+docker logout 

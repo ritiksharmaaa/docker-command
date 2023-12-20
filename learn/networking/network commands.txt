@@ -1,0 +1,24 @@
+# docker command 
+
+docker network ls - it used to list  all network bridge is the default network .
+
+docker network insecpt bridge - it used to inspect bridge netowrk to see whst conayianer are connnected to it .
+
+docker network create --driver bridge network_name  - it is used to create user-defined bridge network 
+
+docker network inspect network network_name - it is used to inspect network 
+
+docker run --name container_name -itd --network_name alpine - it is used ro connect conayiner to a specified network eg host user-define bridge .
+
+docker network connect conatiner_name network_name - it is used to connect a running conatainer to an existing user-defined bridge . 
+
+docker network disconnect conatainer_name network name .-  it is used to disconnect  a running container to an existing user-defined bridge . 
+
+dovker network rm network_name - it is used delete specified network . 
+
+
+
+
+
+
+

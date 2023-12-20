@@ -1,0 +1,119 @@
+What is Docker volume - docker volume is a feature provided by Docker that allows you to manage persistent data in Docker container
+
+
+When a container is created and started it generally run in an isolated environment with its own file system.
+
+However any data is stored within a Docker is typically non - persistent meaning its will be lost when a talker is stopped or removed.
+
+Docker volume provide a way to overcome this limitation by allowing you to create a separate storage area that can be shared between container or between a container and the host system
+
+
+Volume provider mechanism for storing and managing data separately from the container itself ensuring that the data persists even if the container is stopped or deleted.
+
+
+--------------------------------------
+
+What is Doker volume - a Docker volume is essentially a directly or a mound point located outside the container file system which is mapped to a specific path within the container.
+
+
+------------------ Advantage of darker volume---------------------
+
+Volume are easier to backup or migrate than bind mount you can manage volume using Docker CLI command or the Docker Api.
+
+Volume work on both Linux and window containers: - 
+
+Volume can be more safely shared among multiple containers. -----
+
+Volume drive let you store volumes on remote host or clouds providers to encrypt the content of volume or to add other functionality.
+
+new volume can have their content pre - populated by a container . 
+
+Volume on darker desktop have much higher performance than buying mauve from Mac and window host.
+
+
+
+---------------------command -------------
+
+create : - docker volume create volume_name - used to create volume 
+           docker volume ls -  it is used to list volume 
+            docker volume insepct volume_name : - it is used to insepct volume .
+            docker rm volume_name 
+            docker volume prune - it used to remove all volume . 
+
+related command : - 
+  
+create volume while run docker run : - -----------------------------------
+
+  docker run -d --name conatianer_name -v volume_name:/app ngnix(image) - 
+
+   it is used to start a container and create a vloume if volume does 't exists.
+
+
+--------------volume only readonly 
+
+ docker run -d --name conyainer_name -v volume_name:/app:ro image_name 
+
+  it used to start a conatainer and create a read only volume if volume doest not exist . 
+
+
+
+
+
+--------------------------------between host and conatiner ----------------
+
+we can share data between host to container without create docker volume by directly mounting host to conatiner directory .
+
+
+mean you can mout a dir from host which data can be used inside container 
+or nay change from container or host it reflect to each other . 
+
+
+command :  - 
+
+- docker run -itd --name python-c1 -vC:User\raj\desktop\mysite:/myapp python(image) 
+
+
+check after creating via bash 
+
+
+docker exec -it python-c1 bash 
+
+
+---------------share vol  to two container ------------
+
+to share a volume between two Docker conatainer , you can create a docker volume and then mount it to both conatainer . 
+
+
+create volume -- connected to both container so change by any file in volume can be access by both container .
+
+----------------
+
+- create volume then mount contaner 
+- docket volume create myvol 
+
+mount when create container : --- 
+
+docker run --name container_name -itd -v myvol:/myapp python / images name 
+
+------------between container -------
+
+docker run --name c1 -itd -v myvol:/myapp python 
+docker run --name c2 -itd -v myvol:/myapp python 
+
+
+------------another way create container with volume 
+
+docker run --name c1 -itd -v /myvol python 
+docker run --name c2 -itd --volume-from c1 python / mean vol get from c1 container . 
+
+-------------------------delete volume 
+
+first delete all the container which connected with vol . than delete it . 
+
+
+
+
+
+
+
+

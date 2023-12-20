@@ -1,0 +1,207 @@
+in this we learn some basic command which is most used . 
+
+for all you have visit to docker docs
+
+------------------command use din docker ----------------------
+
+1 = docker -v  or docker -version           - for check which version is you used docker .
+2 = docker info              - show information based on sytem . and also based on clien if run .
+3 = 
+
+   docker image you can make or pull from docker hub to run own conatiner 
+
+   command - docker pull and code command to install paticular images .
+
+    examp - docker pull hello-world     or docker image pull option and tags  by default latest tags is placed .
+
+       a testing images .
+
+4 = docker image                      - check and show how many images you have in docker . 
+
+5 = docker search and repo-name          help to search repo from cli .
+
+6 =  docker ps    or docker ps -a -( it show exited conatainer ) and so many other check docer hub . it show only running container 
+        check how many container you have made in docker . 
+
+if you want to know extra about the conatiner : 0 run this command 
+
+docker inspect and conatiner id -- we have also give some line of id it auto detect because container id is so long ,
+
+
+
+
+create container -------------------------------------------------------------
+
+
+
+docker run or images name or tags - we run hello-world it start or end after running some py files .
+
+eachh time conatiner made run and stop because it not process until it not runn in background .
+. 
+
+you can create multiple images from one images . 
+
+command : - 
+
+
+7 =  docker run image name . or img id  
+
+
+now create another container with same name images .
+
+so install you need to add tag which install at time images .
+
+docker run hello-world:latest - if you specifie anotehr tag it pull from repo and make conatianer .
+
+--------random name use when create you should also give your name -------------------
+
+docker run --name #name you want, image name 
+
+
+
+now lets do something with another images . ------------------------------
+
+we are install python slim tags because it size is less so it start fast .
+
+
+
+# running conatiner in backgroud so it can run continously . -----------using option --detact or -d 
+
+
+8 = docker run --name name -d images names or id .
+
+  it is also create or stop because theire is no continious process happen .
+
+# now running in intractive mode so it run continiously . --------------------------------------------
+
+
+9 = docker run --name name -i -t -d image name with tags  also -itd is enough . 
+
+in this 
+
+  i = itractive - open in itractive mode and allow standard input .
+  t = provide intractive terminal session 
+
+  it not send you to terminal but now you conatainer run in background and not stop . because we make a sesiion for terminal .
+
+10 = getting terminal when open container in iterative and terminal session ---------------using docker exec .
+
+
+
+docker exec conatiner name  -it and interpreter provide by in which type od conatiner we made . in web show alpine it a ios terminal . 
+
+it only run which container is running up in -itd mode s. 
+
+
+command - docker exec pythpn-c3 -it and shell/cmd/interpreter = 
+
+you can find which shell we we have to write it . 
+
+so you have inspect it and check cmd there is written what is you have to write it in that place .
+
+
+
+# now check what is happen when we not use -d to make a container  . 
+
+
+docker run --name python-c4 -it python:slim 
+
+
+so it directly send you to terminal . 
+
+
+
+# noe we want to work with a new container and after work dane it auto delete when exit ---------------
+
+--called flag 
+
+docker run --name pytohn-c5 -it --rm pytohn:slim 
+
+it use when you want to work on temporary container --
+
+
+# ----------------stop docker container ----------------
+
+
+docker stop python-c3 
+
+that .its 
+
+
+
+# -------------how start conatiner after make container ------------------
+
+-- it run conatiner at the time of creating conatiner ------- so how we start again from scratch -----------
+
+
+command : - 
+
+docker start container name 
+
+Note : - in which type you intialise your container at the time of making container with imagess 
+
+so next time when you run it using start it carry froward all setiings .
+
+
+# docker Restart 
+
+
+start stop restart work when it open in interative modes . 
+
+
+
+# delete container ---------------------------
+
+
+docker rm container name and id . 
+
+
+# --------------------------------remove docker images -------------------------------------
+
+docker rmi - mean rm images
+
+conditions : - before delete images you have to delete all containers which made from those images . 
+
+# remove multiple docker conatiner at onces -------------------------------------------
+
+command : - docker container prune 
+
+------------------------all images deleted --------------------
+
+docker system prune 
+
+this will delele all images at onces .
+
+
+-------------------------------docker logs --------------------------------
+
+mean somethings got error when runn in conatiner his error show in logs  
+
+command : - 
+
+  docker logs conatiner name 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

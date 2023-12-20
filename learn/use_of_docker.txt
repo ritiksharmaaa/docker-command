@@ -1,0 +1,164 @@
+what is docker . 
+
+  -  docker is an opem- sourse platform that allow you t o automate the deployment and management of application within lightwheight isolated software containers.
+     
+
+
+
+Advantage od using docker : - ]
+
+  
+  Potability : - docker cantainer can run on nay system ensuring consist behaviour acroos diffrent enviroments . it work in any system on docker is used in ther emachine . 
+
+  Isolation : - container provide isolation preventing inrterface between applicaton and dependencies . 
+
+  Efficeiency : - docker caontainer are lightwheight and start quickely optimizing resource utilization . 
+
+  Scalability : - Docker simplifiy scalling by easily replication and distributing container . 
+
+  Versioning and Rollback : - enable vasrsionong and rolback of container application  . you can make multiple conatiner with one images . 
+
+  Docker MAnagement : Docker package with theire dependencies avoiding conflicts . 
+
+  Collobaration : - docker facilated sharing and colloboratio among developrs and teams . 
+
+
+
+whta is dockerfiles . : - 
+
+
+   a docker file is atext file caontain instruction on how to buid a docker images . 
+
+   it specifies the base image the application code dependency and other confihurwations needed to create a runnable images .
+
+   how docker made , for which stack for made ex - python , ubuntu , mysql , we can write thin things in this file . 
+
+
+
+what is docker images . 
+
+   An image is a lightweight standalone executables software package can include everything needed to run an application include the coderuntime system tool library and settings 
+
+  
+  Docker Docker images are created from a base image and can be customized and layered with additional components. 
+
+ 
+
+Docker conatiners .
+
+  Container are isolated and movement dead in encapsulate an application its dependency in home library framework and other software components. 
+
+  Each container man has an isolated process on the host machine has its own file system networking and resources . 
+  
+  You can create multiple container with one docker image.
+
+
+Docker compose . 
+
+  
+  . docker compose is a tool for defining the managing multi - container applications .
+
+  It's allow you to define a multi container setup in YAML file specifying the container their configuration and how they communicate with each other 
+
+ YAML file we can speciy which in muliconatiner file which is thing we use in it . 
+
+  Docker compose simplifies the process of running complex application with multiple interconnected container. 
+
+
+
+Container REgistry .
+
+  Contaier  registry is a centralized repository for restoring and sharing container images .
+
+  allow you to manage and distribute containerized application ensuring secure access versioning and image integrity 
+
+ 
+  example : - 
+
+1 - DockerHUb  (Most Poppular )
+2 - amazone Elastic Container Registery ECR 
+3 - google container Registry GCR 
+4 - Azur Conatiner Registery ACR 
+5 - github container REgistry GHCR
+6 - gitlab Conatiner REgistery . 
+ 
+
+What is docker Conatiner REgistery : ---
+
+
+   A Docker Registry is a central repository that is stored Docker image the most commonly used registry is Docker hub which is public registry where you can find a wide variety of prebuilt Docker images .
+
+same as github you yse image sfrom there and also use user uploded images . you can use to share you docker images . 
+
+
+What is Base images : - 
+
+   A pace image referred to the initial starting point for building a Docker image it served as the foundation or template on which you can add or customize additional layer to create your specific application images.
+
+  a base  images typically a pre built and reusable that a image that contain a specific software stack . 
+
+ Let's provide the necessary runtime and envovernment and library for running application with Docker container. 
+
+
+  Example you might use a base image that include a lightweight Linux distribution such as Alpine Linux or Ubuntu as the foundation for your application .
+
+
+ Regularly update your base image and applying security patches it also recommends to ensure the overall security of your counterise application 
+
+
+
+
+
+DOCKERFILE ------>            DOCKERIMAGE -----------> CANTAINER 1 , 2 , 3 MANY MORE .
+
+
+
+
+
+
+
+docker container vs Virtual machine .
+
+   Docker container are lightweight share the host OS Kernel start quickly and have efficient resource usages . 
+
+   Virtula machine are More isolated requires separate os take longer to start and have direct hardware access. 
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+my views +++++++++++++++++++++++++++++  
+
+
+
+most people say if you use docker to container to set up  your project , so there is no clash between versions . 
+
+supose you have install a paticular operation system and you want to work on mysql 5 or also in another project you need . so you can work 
+
+easily by setting up docker conatiner .
+
+ex-2 
+
+  supose your one project work on python 2 , and another in python 3 ,. rather tha install 2 python . you can just setup and work on it . 
+
+  within docker this alll install in  you operating system .  due to these the project need pytohn 2 they use that version and those who run on pytohn 3 thae use tat things .
+
+
+and if you share the project in anoy\ther system  . who have install docker . in there system .
+
+
+
+because docker container work can make packages and all dependency in ther container . 
+
+
+
+

@@ -1,0 +1,25 @@
+# create volume at the time of 
+
+FROM ubuntu 
+VOLUME ["/data"]
+
+-------------
+the line volume /data in the Dockerfile is an instruction that tells docker to create a mount point for a volume inside the container . it specifies that the directory /data should be treated as volume .
+
+it mean that any data written to or read from the /data directory within the container will be stored outside the container in a volume .
+
+Note : - that the VOLUME  instruction in the Dockerfile does not create the volume itself . 
+----------------
+
+
+in terminal 
+
+docker build -t myimage 
+
+docker run --name c1 -itd -v myvol:/data imagesname /bin/bash (this bin bash is run container in background )
+
+ 
+
+
+
+
